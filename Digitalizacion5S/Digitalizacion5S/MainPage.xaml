@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Digitalizacion5S.MainPage"
+             BackgroundColor="#FCFCD7">
+
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="30">
+            <Frame BackgroundColor="#FFC803" Padding="10" CornerRadius="10">
+                <StackLayout>
+                    <Label Text="Bienvenido"
+                           HorizontalOptions="CenterAndExpand"
+                           FontSize="30"
+                           FontAttributes="Bold"
+                           TextColor="Black"/>
+
+                    <Label x:Name="nombreAuditor"
+                           HorizontalOptions="CenterAndExpand"
+                           FontSize="30"
+                           FontAttributes="Bold"
+                           TextColor="Black"/>
+                </StackLayout>
+            </Frame>
+
+            <Image Source="logo_prolamsa.png"
+                   WidthRequest="300"
+                   HeightRequest="150"
+                   HorizontalOptions="CenterAndExpand"
+                   Aspect="AspectFit"/>
+
+            <Frame BackgroundColor="#FFC803" Padding="10" CornerRadius="10">
+                <Button ImageSource="logo5s.png"
+                        Text="Auditorias 5'S"
+                        TextColor="Black"
+                        Clicked="btn_5s_Clicked"
+                        BackgroundColor="#FCFCD7"
+                        FontAttributes="Bold"
+                        FontSize="27"
+                        HeightRequest="110"
+                        WidthRequest="350"
+                        HorizontalOptions="CenterAndExpand"
+                        CornerRadius="20"/>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+
+    <!--<StackLayout>
+        <Label Text="Bienvenido"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="25"
+               FontAttributes="Bold"
+               TextColor="Black"
+               Padding="20,25,20,10"/>
+
+        <Image Source="logo_prolamsa.png"
+               WidthRequest="300"
+               HeightRequest="150"
+               HorizontalOptions="CenterAndExpand"
+               />
+
+        <StackLayout Orientation="Horizontal">
+
+            <Button ImageSource="logo5s.png"
+                    Text="Auditorias 5'S"
+                    TextColor="Black"
+                    Clicked="btn_5s_Clicked"
+                    BackgroundColor="#FFC803"
+                    FontAttributes="Bold"
+                    FontSize="27"
+                    FontFamily=""
+                    HeightRequest="110"
+                    WidthRequest="350"
+                    HorizontalOptions="CenterAndExpand"
+                    Padding="15,10,15,10"
+                    CornerRadius="20"/>
+
+        </StackLayout>
+
+    </StackLayout>-->
+
+</ContentPage>
