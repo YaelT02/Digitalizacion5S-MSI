@@ -128,80 +128,65 @@
                                             <RowDefinition Height="100"/>
                                             <RowDefinition Height="50"/>
                                             <RowDefinition Height="50"/>
-                                            <RowDefinition Height="*"/>
                                         </Grid.RowDefinitions>
 
                                         <StackLayout Grid.Column="0" Grid.Row="0" Padding="5,60,1,10">
-                                            <Label Text="Hallazgos:" 
+                                            <Label Text="Hallazgos:"                           
                                                    TextColor="Black"
                                                    FontSize="17"
                                                    FontAttributes="Bold"/>
                                         </StackLayout>
 
                                         <StackLayout Grid.Column="1" Grid.Row="0" Padding="-29,27,50,0">
-                                            <Editor Keyboard="Text" 
-                                                    Placeholder="Escriba aqui los hallazgos" 
-                                                    PlaceholderColor="#606052"
-                                                    MaxLength="250"
-                                                    BackgroundColor="#FFC803"
-                                                    TextColor="Black"
-                                                    FontSize="15"
-                                                    HeightRequest="97"
-                                                    x:Name="F2H1S1"/>
+                                            <Editor Keyboard="Text"  
+                                                    Placeholder="Escriba aqui los hallazgos"   
+                                                    PlaceholderColor="#606052" 
+                                                    MaxLength="250"   
+                                                    BackgroundColor="#FFC803" 
+                                                    TextColor="Black"   
+                                                    FontSize="15"    
+                                                    HeightRequest="97"     
+                                                    x:Name="F2H1S1"    
+                                                    Text="{Binding Hallaz1Txt, Mode=TwoWay}"/>
                                         </StackLayout>
 
                                         <StackLayout Grid.Column="0" Grid.Row="1" Padding="5,40,1,0">
-                                            <Label Text="Acciones:"
-                                                   TextColor="Black"
-                                                   FontSize="17"
+                                            <Label Text="Acciones:"    
+                                                   TextColor="Black"       
+                                                   FontSize="17"          
                                                    FontAttributes="Bold"/>
                                         </StackLayout>
 
                                         <StackLayout Grid.Column="1" Grid.Row="1" Padding="-29,0,50,0">
-                                            <Entry Keyboard="Text"
-                                                   Placeholder="Escriba aqui las acciones"
-                                                   PlaceholderColor="#606052"
-                                                   MaxLength="100"
-                                                   BackgroundColor="#FFC803"
-                                                   Margin="0,30,0,0"
-                                                   TextColor="Black"
-                                                   FontSize="15"
-                                                   x:Name="F2A1S1"/>
+                                            <Entry Keyboard="Text"           
+                                                   Placeholder="Escriba aqui las acciones"         
+                                                   PlaceholderColor="#606052"   
+                                                   MaxLength="100"         
+                                                   BackgroundColor="#FFC803"                 
+                                                   Margin="0,30,0,0"                 
+                                                   TextColor="Black"                 
+                                                   FontSize="15"                  
+                                                   x:Name="F2A1S1"                   
+                                                   Text="{Binding Accion1Txt, Mode=TwoWay}"/>
                                         </StackLayout>
 
-                                        <StackLayout Grid.Column="0" Grid.Row="2" Padding="5,40,1,0">
-                                            <Label Text="Responsable:"
-                                                   TextColor="Black"
-                                                   FontSize="14.3"
+                                        <StackLayout Grid.Column="0" Grid.Row="2" Padding="5,40,45,0">
+                                            <Label Text="Fecha &#10;Compromiso:"                       
+                                                   TextColor="Black"            
+                                                   FontSize="14.3"          
                                                    FontAttributes="Bold"/>
                                         </StackLayout>
 
                                         <StackLayout Grid.Column="1" Grid.Row="2" Padding="-29,0,50,0">
-                                            <Entry Keyboard="Text"
-                                                   Placeholder="Ingrese el responsable"
-                                                   PlaceholderColor="#606052"
-                                                   MaxLength="100"
-                                                   BackgroundColor="#FFC803"
-                                                   Margin="0,30,0,0"
-                                                   TextColor="Black"
-                                                   FontSize="15"
-                                                   x:Name="F2R1S1"/>
-                                        </StackLayout>
-
-                                        <StackLayout Grid.Column="0" Grid.Row="3" Padding="5,40,45,0">
-                                            <Label Text="Fecha &#10;Compromiso:"
-                                                   TextColor="Black"
-                                                   FontSize="14.3"
-                                                   FontAttributes="Bold"/>
-                                        </StackLayout>
-
-                                        <StackLayout Grid.Column="1" Grid.Row="3" Padding="-29,0,50,0">
-                                            <DatePicker BackgroundColor="#FFC803"
-                                                        Margin="0,35,0,0"
-                                                        Format="dd-MM-yyyy"
-                                                        MinimumDate="01/01/2023"
-                                                        TextColor="Black"
-                                                        x:Name="F2D1S1"/>
+                                            <Entry BackgroundColor="#FFC803"               
+                                                   PlaceholderColor="#606052"              
+                                                   MaxLength="100"             
+                                                   Margin="0,30,0,0"              
+                                                   FontSize="15"               
+                                                   Placeholder="dd/MM/yyyy"                 
+                                                   TextColor="Black"                 
+                                                   x:Name="F2D1S1"                     
+                                                   Text="{Binding Fecha1Txt, Mode=TwoWay}"/>
                                         </StackLayout>
 
                                     </Grid>

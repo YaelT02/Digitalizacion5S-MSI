@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace Digitalizacion5S.View
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class CargarResultados : ContentPage
-	{
-		public CargarResultados ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Auditorias : ContentPage
+    {
+        public Auditorias()
+        {
+            InitializeComponent();
+        }
+    }
 }

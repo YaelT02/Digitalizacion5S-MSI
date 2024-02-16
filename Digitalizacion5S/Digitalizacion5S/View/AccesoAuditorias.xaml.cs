@@ -56,5 +56,15 @@ namespace Digitalizacion5S.View
             }
             
         }
+
+        private async void Resultados(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync (new Resultados());
+        }
+
+        private async void Auditorias(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync (new Auditorias());
+        }
     }
 }

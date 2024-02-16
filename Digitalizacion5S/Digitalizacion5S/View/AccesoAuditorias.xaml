@@ -12,66 +12,38 @@
                        HorizontalOptions="CenterAndExpand"/>
 
                 <StackLayout x:Name="botones_din">
-                    
-                </StackLayout>
-                
 
-                <!--<StackLayout Padding="15,10,15,15">
-                    <Button Text="Esmerilado"
-                            Clicked="Auditoria1_Clicked"
-                            TextColor="Black"
-                            BackgroundColor="#FFC803"
-                            FontAttributes="Bold,Italic"
-                            FontSize="30"
-                            HeightRequest="100"
-                            WidthRequest="350"
-                            HorizontalOptions="CenterAndExpand"
-                            Padding="15,20,15,20"
-                            CornerRadius="230"/>
                 </StackLayout>
 
-                <StackLayout Padding="15,0,15,15">
-                    <Button Text="Oicina Jefatura de Corte"
-                            Clicked="Auditoria2_Clicked"
-                            TextColor="Black"
-                            BackgroundColor="#FFC803"
-                            FontAttributes="Bold,Italic"
-                            FontSize="30"
-                            HeightRequest="100"
-                            WidthRequest="350"
-                            HorizontalOptions="CenterAndExpand"
-                            Padding="15,10,15,10"
-                            CornerRadius="230"/>
-                </StackLayout>
+                <Frame Margin="34" Padding="20,10" CornerRadius="20" BackgroundColor="Black">
+                    <StackLayout>
+                        <Label Text="Ingresa a tus resultados"
+                               TextColor="#FFC803"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"
+                               FontAttributes="Bold"
+                               FontSize="17"/>
+                        
+                        <StackLayout Orientation="Horizontal">
+                            <Button Text="Mis resultados"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    CornerRadius="10"
+                                    BackgroundColor="#FFC803"
+                                    TextColor="Black"
+                                    Clicked="Resultados"/>
 
-                <StackLayout Padding="15,0,15,15">
-                    <Button Text="Cortadora CT04"
-                            Clicked="Auditoria3_Clicked"
-                            TextColor="Black"
-                            BackgroundColor="#FFC803"
-                            FontAttributes="Bold,Italic"
-                            FontSize="30"
-                            HeightRequest="100"
-                            WidthRequest="350"
-                            HorizontalOptions="CenterAndExpand"
-                            Padding="15,10,15,10"
-                            CornerRadius="230"/>
-                </StackLayout>
-
-                <StackLayout Padding="15,0,15,15">
-                    <Button Text="COrtadora CT17"
-                            Clicked="Auditoria4_Clicked"
-                            TextColor="Black"
-                            BackgroundColor="#FFC803"
-                            FontAttributes="Bold,Italic"
-                            FontSize="30"
-                            HeightRequest="100"
-                            WidthRequest="350"
-                            HorizontalOptions="CenterAndExpand"
-                            Padding="15,10,15,10"
-                            CornerRadius="230"/>
-                </StackLayout>-->
-
+                            <Button Text="Mis Auditorias"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    CornerRadius="10"
+                                    BackgroundColor="#FFC803"
+                                    TextColor="Black"
+                                    Clicked="Auditorias"/>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                </Frame>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

@@ -15,11 +15,15 @@ namespace Digitalizacion5S.Formatos
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PG17MesasCambio : ContentPage
     {
+        private HallazgosViewModel _hallaz;
         double resultadosF17;
+        //public PG17MesasCambio(HallazgosViewModel Hallaz)
         public PG17MesasCambio()
+
         {
             InitializeComponent();
             BindingContext = new HallazgosViewModel();
+            //_hallaz = Hallaz;
         }
 
         private async void Result_Clicked(object sender, EventArgs e)
@@ -218,6 +222,11 @@ namespace Digitalizacion5S.Formatos
             }
 
             await DisplayAlert("AUDITORIA", "Calificación cargada correctamente", "Ok");
+
+            //if (_hallaz.InsertCommand.CanExecute(null))
+            //{
+            //    _hallaz.InsertCommand.Execute(null);
+            //}
         }
     }
 }

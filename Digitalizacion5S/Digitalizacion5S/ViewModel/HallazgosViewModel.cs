@@ -11,7 +11,8 @@ using System.Windows.Input;
 namespace Digitalizacion5S.ViewModel
 {
     public class HallazgosViewModel : BaseViewModel
-    {
+    { 
+
         FirebaseHelper firebaseHelper = new FirebaseHelper();
 
         #region Attributes

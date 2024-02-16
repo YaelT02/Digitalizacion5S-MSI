@@ -35,7 +35,7 @@
                         Clicked="btn_5s_Clicked"
                         BackgroundColor="#FCFCD7"
                         FontAttributes="Bold"
-                        FontSize="27"
+                        FontSize="24"
                         HeightRequest="110"
                         WidthRequest="350"
                         HorizontalOptions="CenterAndExpand"
