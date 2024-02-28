@@ -28,6 +28,8 @@ namespace Digitalizacion5S.Formatos
 
         private async void Result_Clicked(object sender, EventArgs e)
         {
+
+
             await DisplayAlert("Mensaje", "Auditoria Enviada", "Continuar");
             await Navigation.PushAsync(new AccesoAuditorias());
         }

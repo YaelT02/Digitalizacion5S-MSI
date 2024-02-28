@@ -1873,8 +1873,8 @@
                             VerticalOptions="Center"    
                             HorizontalOptions="Center"     
                             TextColor="Black"    
-                            CornerRadius="40"     
-                            Clicked="Mensaje_ADD"/>
+                            CornerRadius="40"
+                            Clicked="Result_Clicked"/>
                 </StackLayout>
 
                 <StackLayout Padding="15,20,15,50" Margin="0,-40,0,0">
@@ -1888,7 +1888,7 @@
                             HorizontalOptions="Center"      
                             TextColor="Black"      
                             CornerRadius="40"      
-                            Clicked="Result_Clicked"/>
+                            Command="{Binding InsertCommandOO}"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

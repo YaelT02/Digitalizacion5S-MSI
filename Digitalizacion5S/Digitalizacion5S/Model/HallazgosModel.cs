@@ -17,12 +17,12 @@ namespace Digitalizacion5S.Model
         public string Fecha3 { get; set; }
         public string Fecha4 { get; set; }
         public string Fecha5 { get; set; }
-        public string Accion1 { get; set;}
-        public string Accion2 { get; set;}
-        public string Accion3 { get; set;}
-        public string Accion4 { get; set;}
+        public string Accion1 { get; set; }
+        public string Accion2 { get; set; }
+        public string Accion3 { get; set; }
+        public string Accion4 { get; set; }
         public string Accion5 { get; set; }
-        public string NumHallaz { get; set;}
-        public string Cal { get; set;}
+        public string NumHallaz { get; set; }
+        public string Cal { get; set; }
     }
 }

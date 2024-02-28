@@ -57,7 +57,7 @@ namespace Digitalizacion5S.Services
         await firebase
             .Child("Hallazgo")
             .Child(ClaveArea)
-            .PostAsync(new HallazgosModel()
+            .PutAsync(new HallazgosModel()
             {
                 ID = ClaveArea,
                 Hallaz1 = hallazgosModel.Hallaz1,
@@ -78,6 +78,79 @@ namespace Digitalizacion5S.Services
                 Cal = Cal,
                 NumHallaz = numHallaz
             });
+        }
+
+        public async Task AddHallazOO(string numHallaz, string Cal, HallazgosOOModel hallazgosOOModel)
+        {
+
+            await firebase
+                .Child("Hallazgo")
+                .Child(ClaveArea)
+                .PutAsync(new HallazgosOOModel()
+                {
+                    ID = ClaveArea,
+                    #region 1eraS
+                    Hallaz1S1 = hallazgosOOModel.Hallaz1S1,
+                    Hallaz2S1 = hallazgosOOModel.Hallaz2S1,
+                    Hallaz3S1 = hallazgosOOModel.Hallaz3S1,
+                    Hallaz4S1 = hallazgosOOModel.Hallaz4S1,
+                    Fecha1S1 = hallazgosOOModel.Fecha1S1,
+                    Fecha2S1 = hallazgosOOModel.Fecha2S1,
+                    Fecha3S1 = hallazgosOOModel.Fecha3S1,
+                    Fecha4S1 = hallazgosOOModel.Fecha4S1,
+                    Accion1S1 = hallazgosOOModel.Accion1S1,
+                    Accion2S1 = hallazgosOOModel.Accion2S1,
+                    Accion3S1 = hallazgosOOModel.Accion3S1,
+                    Accion4S1 = hallazgosOOModel.Accion4S1,
+                    #endregion
+
+                    #region 2daS
+                    Hallaz1S2 = hallazgosOOModel.Hallaz1S2,
+                    Hallaz2S2 = hallazgosOOModel.Hallaz2S2,
+                    Hallaz3S2 = hallazgosOOModel.Hallaz3S2,
+                    Hallaz4S2 = hallazgosOOModel.Hallaz4S2,
+                    Fecha1S2 = hallazgosOOModel.Fecha1S2,
+                    Fecha2S2 = hallazgosOOModel.Fecha2S2,
+                    Fecha3S2 = hallazgosOOModel.Fecha3S2,
+                    Fecha4S2 = hallazgosOOModel.Fecha4S2,
+                    Accion1S2 = hallazgosOOModel.Accion1S2,
+                    Accion2S2 = hallazgosOOModel.Accion2S2,
+                    Accion3S2 = hallazgosOOModel.Accion3S2,
+                    Accion4S2 = hallazgosOOModel.Accion4S2,
+                    #endregion
+
+                    #region 3eraS
+                    Hallaz1S3 = hallazgosOOModel.Hallaz1S3,
+                    Hallaz2S3 = hallazgosOOModel.Hallaz2S3,
+                    Hallaz3S3 = hallazgosOOModel.Hallaz3S3,
+                    Hallaz4S3 = hallazgosOOModel.Hallaz4S3,
+                    Fecha1S3 = hallazgosOOModel.Fecha1S3,
+                    Fecha2S3 = hallazgosOOModel.Fecha2S3,
+                    Fecha3S3 = hallazgosOOModel.Fecha3S3,
+                    Fecha4S3 = hallazgosOOModel.Fecha4S3,
+                    Accion1S3 = hallazgosOOModel.Accion1S3,
+                    Accion2S3 = hallazgosOOModel.Accion2S3,
+                    Accion3S3 = hallazgosOOModel.Accion3S3,
+                    Accion4S3 = hallazgosOOModel.Accion4S3,
+                    #endregion
+
+                    #region 4taS
+                    Hallaz1S4 = hallazgosOOModel.Hallaz1S4,
+                    Hallaz2S4 = hallazgosOOModel.Hallaz2S4,
+                    Hallaz3S4 = hallazgosOOModel.Hallaz3S4,
+                    Hallaz4S4 = hallazgosOOModel.Hallaz4S4,
+                    Fecha1S4 = hallazgosOOModel.Fecha1S4,
+                    Fecha2S4 = hallazgosOOModel.Fecha2S4,
+                    Fecha3S4 = hallazgosOOModel.Fecha3S4,
+                    Fecha4S4 = hallazgosOOModel.Fecha4S4,
+                    Accion1S4 = hallazgosOOModel.Accion1S4,
+                    Accion2S4 = hallazgosOOModel.Accion2S4,
+                    Accion3S4 = hallazgosOOModel.Accion3S4,
+                    Accion4S4 = hallazgosOOModel.Accion4S4,
+                    #endregion
+                    Cal = Cal,
+                    NumHallaz = numHallaz
+                });
         }
         #endregion
 
