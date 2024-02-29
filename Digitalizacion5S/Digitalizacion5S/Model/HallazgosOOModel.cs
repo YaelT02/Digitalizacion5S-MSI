@@ -69,6 +69,21 @@ namespace Digitalizacion5S.Model
         public string Accion4S4 { get; set; }
         #endregion
 
+        #region 5taS
+        public string Hallaz1S5 { get; set; }
+        public string Hallaz2S5 { get; set; }
+        public string Hallaz3S5 { get; set; }
+        public string Hallaz4S5 { get; set; }
+        public string Fecha1S5 { get; set; }
+        public string Fecha2S5 { get; set; }
+        public string Fecha3S5 { get; set; }
+        public string Fecha4S5 { get; set; }
+        public string Accion1S5 { get; set; }
+        public string Accion2S5 { get; set; }
+        public string Accion3S5 { get; set; }
+        public string Accion4S5 { get; set; }
+        #endregion
+
         public string NumHallaz { get; set; }
         public string Cal { get; set; }
     }

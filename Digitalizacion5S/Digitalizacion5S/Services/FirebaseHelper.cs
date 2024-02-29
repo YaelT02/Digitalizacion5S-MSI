@@ -148,6 +148,21 @@ namespace Digitalizacion5S.Services
                     Accion3S4 = hallazgosOOModel.Accion3S4,
                     Accion4S4 = hallazgosOOModel.Accion4S4,
                     #endregion
+
+                    #region 5taS
+                    Hallaz1S5 = hallazgosOOModel.Hallaz1S5,
+                    Hallaz2S5 = hallazgosOOModel.Hallaz2S5,
+                    Hallaz3S5 = hallazgosOOModel.Hallaz3S5,
+                    Hallaz4S5 = hallazgosOOModel.Hallaz4S5,
+                    Fecha1S5 = hallazgosOOModel.Fecha1S5,
+                    Fecha2S5 = hallazgosOOModel.Fecha2S5,
+                    Fecha3S5 = hallazgosOOModel.Fecha3S5,
+                    Fecha4S5 = hallazgosOOModel.Fecha4S5,
+                    Accion1S5 = hallazgosOOModel.Accion1S5,
+                    Accion2S5 = hallazgosOOModel.Accion2S5,
+                    Accion3S5 = hallazgosOOModel.Accion3S5,
+                    Accion4S5 = hallazgosOOModel.Accion4S5,
+                    #endregion
                     Cal = Cal,
                     NumHallaz = numHallaz
                 });

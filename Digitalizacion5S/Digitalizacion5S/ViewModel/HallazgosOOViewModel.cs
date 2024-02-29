@@ -611,6 +611,21 @@ namespace Digitalizacion5S.ViewModel
                 Accion3S4 = accion3S4,
                 Accion4S4 = accion4S4,
                 #endregion
+
+                #region 5taS
+                Hallaz1S5 = hallaz1S5,
+                Hallaz2S5 = hallaz2S5,
+                Hallaz3S5 = hallaz3S5,
+                Hallaz4S5 = hallaz4S5,
+                Fecha1S5 = fecha1S5,
+                Fecha2S5 = fecha2S5,
+                Fecha3S5 = fecha3S5,
+                Fecha4S5 = fecha4S5,
+                Accion1S5 = accion1S5,
+                Accion2S5 = accion2S5,
+                Accion3S5 = accion3S5,
+                Accion4S5 = accion4S5,
+                #endregion
             };
 
             string nHall = AppGlobals.hallazCont;

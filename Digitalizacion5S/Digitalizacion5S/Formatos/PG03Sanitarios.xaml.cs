@@ -220,35 +220,31 @@ namespace Digitalizacion5S.Formatos
             if (hallaz1 != null)
             {
                 hallazCont += 1;
-                //AppGlobals.hallazCont = hallazCont.ToString();
 
                 if (hallaz2 != null)
                 {
                     hallazCont += 1;
-                    //AppGlobals.hallazCont = hallazCont.ToString();
 
                     if (hallaz3 != null)
                     {
                         hallazCont += 1;
-                        //AppGlobals.hallazCont = hallazCont.ToString();
 
                         if (hallaz4 != null)
                         {
                             hallazCont += 1;
-                            //AppGlobals.hallazCont = hallazCont.ToString();
 
                             if (hallaz5 != null)
                             {
                                 hallazCont += 1;
-                                //AppGlobals.hallazCont = hallazCont.ToString();
                             }
                         }
                     }
                 }
-                AppGlobals.hallazCont = hallazCont.ToString();
-
-                FirebaseHelper fb = new FirebaseHelper();
             }
+
+            AppGlobals.hallazCont = hallazCont.ToString();
+
+            FirebaseHelper fb = new FirebaseHelper();
 
             await DisplayAlert("AUDITORIA", "Calificación cargada correctamente", "Ok");
 
