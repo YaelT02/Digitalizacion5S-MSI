@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Digitalizacion5S.Services;
+using Digitalizacion5S.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,345 +18,555 @@ namespace Digitalizacion5S.Formatos
         public PG02Oficinas()
         {
             InitializeComponent();
+            BindingContext = new HallazgosOOViewModel();
         }
 
-        private void EnviarCuestionario(object sender, EventArgs e)
+        private async void Result_Clicked(object sender, EventArgs e)
         {
-            double calS1, calS2, calS3, calS4, calS5;
-            int contS1 = 2, contS2 = 3, contS3 = 4, contS4 = 2, contS5 = 3;
-            double contCalS1 = 0.0, contCalS2 = 0.0, contCalS3 = 0.0, contCalS4 = 0.0, contCalS5 = 0.0;
+            string hallaz1S1, hallaz2S1, hallaz3S1, hallaz4S1,
+                   hallaz1S2, hallaz2S2, hallaz3S2, hallaz4S2,
+                   hallaz1S3, hallaz2S3, hallaz3S3, hallaz4S3,
+                   hallaz1S4, hallaz2S4, hallaz3S4, hallaz4S4,
+                   hallaz1S5, hallaz2S5, hallaz3S5, hallaz4S5;
 
-            //Primera "S"
-            //Pregunta 1 - S1
+            int hallazCont1 = 0,
+                hallazCont2 = 0,
+                hallazCont3 = 0,
+                hallazCont4 = 0,
+                hallazCont5 = 0,
+                hallazContF = 0;
+
+            int pregTot1 = 2,
+                pregTot2 = 3,
+                pregTot3 = 4,
+                pregTot4 = 2,
+                pregTot5 = 3;
+
+            int contS1 = 0,
+                contS2 = 0,
+                contS3 = 0,
+                contS4 = 0,
+                contS5 = 0;
+
+            double calS1 = 0.0,
+                   calS2 = 0.0,
+                   calS3 = 0.0,
+                   calS4 = 0.0,
+                   calS5 = 0.0,
+                   calTot = 0.0;
+
+            #region Calificaciones
+
+            #region Calificaciones_1raS
+
+            //Pregunta 1
             if (NA1F2S1.IsChecked)
             {
-                contS1 = contS1 - 1;
+                pregTot1 -= 1;
             }
             else
             {
                 if (C1F2S1.IsChecked)
                 {
-                    contCalS1 = contCalS1 + 10;
+                    contS1 += 10;
                 }
                 else if (NC1F2S1.IsChecked)
                 {
-                    contCalS1 = contCalS1 + 0;
+                    contS1 -= 0;
                 }
             }
 
-            //Pregunta 2 - S1
+            //Pregunta 2
             if (NA2F2S1.IsChecked)
             {
-                //c = c - 1;
-                contS1 -= 1;
+                pregTot1 -= 1;
             }
             else
             {
                 if (C2F2S1.IsChecked)
                 {
-                    contCalS1 = contCalS1 + 10;
+                    contS1 += 10;
+                }
+                else if (NC2F2S1.IsChecked)
+                {
+                    contS1 -= 0;
+                }
+            }
+
+            if (contS1 == 0)
+            {
+                calS1 = 0.0;
+            }
+            else
+            {
+                calS1 = (contS1 / pregTot1) / 10;
+            }
+
+            #endregion
+
+            #region Calificaciones_2daS
+
+            //Pregunta 1
+            if (NA1F2S2.IsChecked)
+            {
+                pregTot2 -= 1;
+            }
+            else
+            {
+                if (C1F2S2.IsChecked)
+                {
+                    contS2 += 10;
+                }
+                else if (NC1F2S2.IsChecked)
+                {
+                    contS2 -= 0;
+                }
+            }
+
+            //Pregunta 2
+            if (NA2F2S2.IsChecked)
+            {
+                pregTot2 = -1;
+            }
+            else
+            {
+                if (C2F2S2.IsChecked)
+                {
+                    contS2 += 10;
                 }
                 else if (NC2F2S2.IsChecked)
                 {
-                    contCalS1 = contCalS1 + 0;
+                    contS2 -= 0;
                 }
             }
 
-            //Calificación - S1
-            if (contS1 == 0)
+            //Pregunta 3
+            if (NA3F2S2.IsChecked)
             {
-                calS1 = 0;
+                pregTot2 = -1;
             }
             else
             {
-                calS1 = (contCalS1 / contS1) / 10;
+                if (C3F2S2.IsChecked)
+                {
+                    contS2 += 10;
+                }
+                else if (NC3F2S2.IsChecked)
+                {
+                    contS2 -= 0;
+                }
             }
 
-            //Paso a segunda calificación
+
+            if (contS2 == 0)
+            {
+                calS2 = 0.0;
+            }
+            else
+            {
+                calS2 = (contS2 / pregTot2) / 10;
+            }
+
+            #endregion
+
+            #region Calificaciones_3raS
+
+            //Pregunta 1
+            if (NA1F2S3.IsChecked)
+            {
+                pregTot3 -= 1;
+            }
+            else
+            {
+                if (C1F2S3.IsChecked)
+                {
+                    contS3 += 10;
+                }
+                else if (NC1F2S3.IsChecked)
+                {
+                    contS3 -= 0;
+                }
+            }
+
+            //Pregunta 2
+            if (NA2F2S3.IsChecked)
+            {
+                pregTot3 = -1;
+            }
+            else
+            {
+                if (C2F2S3.IsChecked)
+                {
+                    contS3 += 10;
+                }
+                else if (NC2F2S3.IsChecked)
+                {
+                    contS3 -= 0;
+                }
+            }
+
+            //Pregunta 3
+            if (NA3F2S3.IsChecked)
+            {
+                pregTot3 = -1;
+            }
+            else
+            {
+                if (C3F2S3.IsChecked)
+                {
+                    contS3 += 10;
+                }
+                else if (NC3F2S3.IsChecked)
+                {
+                    contS3 -= 0;
+                }
+            }
+
+            //Pregunta 4
+            if (NA4F2S3.IsChecked)
+            {
+                pregTot3 -= 1;
+            }
+            else
+            {
+                if (C4F2S3.IsChecked)
+                {
+                    contS3 += 10;
+                }
+                else if (NC4F2S3.IsChecked)
+                {
+                    contS3 -= 0;
+                }
+            }
+
+            if (contS3 == 0)
+            {
+                calS3 = 0.0;
+            }
+            else
+            {
+                calS3 = (contS3 / pregTot3) / 10;
+            }
+
+            #endregion
+
+            #region Calificaciones_4taS
+
+            //Pregunta 1
+            if (NA1F2S4.IsChecked)
+            {
+                pregTot4 -= 1;
+            }
+            else
+            {
+                if (C1F2S4.IsChecked)
+                {
+                    contS4 += 10;
+                }
+                else if (NC1F2S4.IsChecked)
+                {
+                    contS4 -= 0;
+                }
+            }
+
+            //Pregunta 2
+            if (NA2F2S4.IsChecked)
+            {
+                pregTot4 = -1;
+            }
+            else
+            {
+                if (C2F2S4.IsChecked)
+                {
+                    contS4 += 10;
+                }
+                else if (NC2F2S4.IsChecked)
+                {
+                    contS4 -= 0;
+                }
+            }
+
+            if (contS4 == 0)
+            {
+                calS4 = 0.0;
+            }
+            else
+            {
+                calS4 = (contS4 / pregTot4) / 10;
+            }
+
+            #endregion
+
+            #region Calificaciones_5taS
+
+            //Pregunta 1
+            if (NA1F2S5.IsChecked)
+            {
+                pregTot5 -= 1;
+            }
+            else
+            {
+                if (C1F2S5.IsChecked)
+                {
+                    contS5 += 10;
+                }
+                else if (NC1F2S5.IsChecked)
+                {
+                    contS5 -= 0;
+                }
+            }
+
+            //Pregunta 2
+            if (NA2F2S5.IsChecked)
+            {
+                pregTot5 = -1;
+            }
+            else
+            {
+                if (C2F2S5.IsChecked)
+                {
+                    contS5 += 10;
+                }
+                else if (NC2F2S5.IsChecked)
+                {
+                    contS5 -= 0;
+                }
+            }
+
+            //Pregunta 3
+            if (NA3F2S5.IsChecked)
+            {
+                pregTot5 = -1;
+            }
+            else
+            {
+                if (C3F2S5.IsChecked)
+                {
+                    contS5 += 10;
+                }
+                else if (NC3F2S5.IsChecked)
+                {
+                    contS5 -= 0;
+                }
+            }
+
+            if (contS5 == 0)
+            {
+                calS5 = 0.0;
+            }
+            else
+            {
+                calS5 = (contS5 / pregTot5) / 10;
+            }
+
+            #endregion
+
+            #region Calificación_Final
+
             if (calS1 >= 0.5)
             {
-                //Segunda S
-                //Pregunta 1 - S2
-                if (NA1F2S2.IsChecked)
-                {
-                    contS2 = contS2 - 1;
-                }
-                else
-                {
-                    if (C1F2S2.IsChecked)
-                    {
-                        contCalS2 = contCalS2 + 10;
-                    }
-                    else if (NC1F2S2.IsChecked)
-                    {
-                        contCalS2 = contCalS2 + 0;
-                    }
-                }
+                calTot = calTot + calS1;
 
-                //Pregunta 2 - S2
-                if (NA2F2S2.IsChecked)
-                {
-                    contS2 = contS2 - 1;
-                }
-                else
-                {
-                    if (C2F2S2.IsChecked)
-                    {
-                        contCalS2 = contCalS2 + 10;
-                    }
-                    else if (NC2F2S2.IsChecked)
-                    {
-                        contCalS2 = contCalS2 + 0;
-                    }
-                }
-
-                //Pregunta 3 - S2
-                if (NA3F2S2.IsChecked)
-                {
-                    contS2 = contS2 - 1;
-                }
-                else
-                {
-                    if (C3F2S2.IsChecked)
-                    {
-                        contCalS2 = contCalS2 + 10;
-                    }
-                    else if (NC3F2S2.IsChecked)
-                    {
-                        contCalS2 = contCalS2 + 0;
-                    }
-                }
-
-                //Calificación - S2
-                if (contS2 == 0)
-                {
-                    calS2 = 0;
-                }
-                else
-                {
-                    calS2 = (contCalS2 / contS2) / 10;
-                }
-
-                //Paso a tercera calificación
                 if (calS2 >= 0.5)
                 {
-                    //Tercera S
-                    //Pregunta 1 - S3
-                    if (NA1F2S3.IsChecked)
-                    {
-                        contS3 = contS3 - 1;
-                    }
-                    else
-                    {
-                        if (C1F2S3.IsChecked)
-                        {
-                            contCalS3 = contCalS3 + 10;
-                        }
-                        else if (NC1F2S3.IsChecked)
-                        {
-                            contCalS2 = contCalS2 + 0;
-                        }
-                    }
+                    calTot = calTot + calS2;
 
-                    //Pregunta 2 - S3
-                    if (NA2F2S3.IsChecked)
+                    if (calS3 >= 0.5)
                     {
-                        contS3 = contS3 - 1;
-                    }
-                    else
-                    {
-                        if (C2F2S3.IsChecked)
-                        {
-                            contCalS3 = contCalS3 + 10;
-                        }
-                        else if (NC2F2S3.IsChecked)
-                        {
-                            contCalS3 = contCalS3 + 0;
-                        }
-                    }
+                        calTot = calTot + calS3;
 
-                    //Pregunta 3 - S3
-                    if (NA3F2S3.IsChecked)
-                    {
-                        contS3 = contS3 - 1;
-                    }
-                    else
-                    {
-                        if (C3F2S3.IsChecked)
-                        {
-                            contCalS3 = contCalS3 + 10;
-                        }
-                        else if (NC3F2S3.IsChecked)
-                        {
-                            contCalS3 = contCalS3 + 0;
-                        }
-                    }
-
-                    //Pregunta 4 - S3
-                    if (NA4F2S3.IsChecked)
-                    {
-                        contS3 = contS3 - 1;
-                    }
-                    else
-                    {
-                        if (C4F2S3.IsChecked)
-                        {
-                            contCalS3 = contCalS3 + 10;
-                        }
-                        else if (NC4F2S3.IsChecked)
-                        {
-                            contCalS3 = contCalS3 + 0;
-                        }
-                    }
-
-                    //Calificación - S3
-                    if (contS3 == 0)
-                    {
-                        calS3 = 0;
-                    }
-                    else
-                    {
-                        calS3 = (contCalS3 / contS3) / 10;
-                    }
-
-                    //Paso a cuarta calificación
-                    if (calS3 >= 0.66)
-                    {
-                        //Cuarta S
-                        //Pregunta 1 - S4
-                        if (NA1F2S4.IsChecked)
-                        {
-                            contS4 = contS4 - 1;
-                        }
-                        else
-                        {
-                            if (C1F2S4.IsChecked)
-                            {
-                                contCalS4 = contCalS4 + 10;
-                            }
-                            else if (NC1F2S4.IsChecked)
-                            {
-                                contCalS4 = contCalS4 + 0;
-                            }
-                        }
-
-                        //Pregunta 2 - S4
-                        if (NA2F2S4.IsChecked)
-                        {
-                            contS4 = contS4 - 1;
-                        }
-                        else
-                        {
-                            if (C2F2S4.IsChecked)
-                            {
-                                contCalS4 = contCalS4 + 10;
-                            }
-                            else if (NC2F2S4.IsChecked)
-                            {
-                                contCalS4 = contCalS4 + 0;
-                            }
-                        }
-
-                        //Calificación - S4
-                        if (contS4 == 0)
-                        {
-                            calS4 = 0;
-                        }
-                        else
-                        {
-                            calS4 = (contCalS4 / contS4) / 10;
-                        }
-
-                        //Paso a quinta calificación
                         if (calS4 >= 0.5)
                         {
-                            //Pregunta 1 - S5
-                            if (NA1F2S5.IsChecked)
-                            {
-                                contS5 = contS5 - 1;
-                            }
-                            else
-                            {
-                                if (C1F2S5.IsChecked)
-                                {
-                                    contCalS5 = contCalS5 + 10;
-                                }
-                                else if (NC1F2S5.IsChecked)
-                                {
-                                    contCalS5 = contCalS5 + 0;
-                                }
-                            }
+                            calTot = calTot + calS4;
 
-                            //Pregunta 2 - S5
-                            if (NA2F2S5.IsChecked)
+                            if (calS5 >= 0.66)
                             {
-                                contS5 = contS5 - 1;
+                                calTot = calTot + calS5;
                             }
-                            else
-                            {
-                                if (C2F2S5.IsChecked)
-                                {
-                                    contCalS5 = contCalS5 + 10;
-                                }
-                                else if (NC2F2S5.IsChecked)
-                                {
-                                    contCalS5 = contCalS5 + 0;
-                                }
-                            }
-
-                            //Pregunta 3 - S5
-                            if (NA3F2S5.IsChecked)
-                            {
-                                contS5 = contS5 - 1;
-                            }
-                            else
-                            {
-                                if (C3F2S5.IsChecked)
-                                {
-                                    contCalS5 = contCalS5 + 10;
-                                }
-                                else if (NC3F2S5.IsChecked)
-                                {
-                                    contCalS5 = contCalS5 + 0;
-                                }
-                            }
-
-                            //Calificación - S5
-                            if (contS5 == 0)
-                            {
-                                calS5 = 0;
-                            }
-                            else
-                            {
-                                calS5 = (contCalS5 / contS5) / 10;
-                            }
-
-                            resulFin = calS1 + calS2 + calS3 + calS4 + calS5;
-
                         }
-                        else
-                        {
-                            resulFin = calS1 + calS2 + calS3 + calS4;
-                        }
-
                     }
-                    else
-                    {
-                        resulFin = calS1 + calS2 + calS3;
-                    }
-
                 }
-                else
-                {
-                    resulFin = calS2 + calS1;
-                }
-
             }
-            else
+            else if (calS1 < 0.5)
             {
-                resulFin = calS1;
+                calTot = calTot + calS1;
             }
 
+            AppGlobals.resulArea = calTot.ToString();
+
+            #endregion
+
+            #endregion
+
+            #region Hallazgos
+
+            #region Hallazgos_1raS
+
+            hallaz1S1 = F2H1S1.Text;
+            hallaz2S1 = F2H2S1.Text;
+            hallaz3S1 = F2H3S1.Text;
+            hallaz4S1 = F2H4S1.Text;
+
+            //Numero de hallazgos
+            if (hallaz1S1 != null)
+            {
+                hallazCont1 += 1;
+            }
+
+            if (hallaz2S1 != null)
+            {
+                hallazCont1 += 1;
+            }
+
+            if (hallaz3S1 != null)
+            {
+                hallazCont1 += 1;
+            }
+
+            if (hallaz4S1 != null)
+            {
+                hallazCont1 += 1;
+            }
+
+            hallazContF = hallazContF + hallazCont1;
+
+            #endregion
+
+            #region Hallazgos_2daS
+
+            hallaz1S2 = F2H1S2.Text;
+            hallaz2S2 = F2H2S2.Text;
+            hallaz3S2 = F2H3S2.Text;
+            hallaz4S2 = F2H4S2.Text;
+
+            //Numero de hallazgos
+            if (hallaz1S2 != null)
+            {
+                hallazCont2 += 1;
+            }
+
+            if (hallaz2S2 != null)
+            {
+                hallazCont2 += 1;
+            }
+
+            if (hallaz3S2 != null)
+            {
+                hallazCont2 += 1;
+            }
+
+            if (hallaz4S2 != null)
+            {
+                hallazCont2 += 1;
+            }
+
+            hallazContF = hallazContF + hallazCont2;
+
+            #endregion
+
+            #region Hallazgos_3raS
+
+            hallaz1S3 = F2H1S3.Text;
+            hallaz2S3 = F2H2S3.Text;
+            hallaz3S3 = F2H3S3.Text;
+            hallaz4S3 = F2H4S3.Text;
+
+            //Numero de hallazgos
+            if (hallaz1S3 != null)
+            {
+                hallazCont3 += 1;
+            }
+
+            if (hallaz2S3 != null)
+            {
+                hallazCont3 += 1;
+            }
+
+            if (hallaz3S3 != null)
+            {
+                hallazCont3 += 1;
+            }
+
+            if (hallaz4S3 != null)
+            {
+                hallazCont3 += 1;
+            }
+
+            hallazContF = hallazContF + hallazCont3;
+
+            #endregion
+
+            #region Hallazgos_4taS
+
+            hallaz1S4 = F2H1S4.Text;
+            hallaz2S4 = F2H2S4.Text;
+            hallaz3S4 = F2H3S4.Text;
+            hallaz4S4 = F2H4S4.Text;
+
+            //Numero de hallazgos
+            if (hallaz1S4 != null)
+            {
+                hallazCont4 += 1;
+            }
+
+            if (hallaz2S4 != null)
+            {
+                hallazCont4 += 1;
+            }
+
+            if (hallaz3S4 != null)
+            {
+                hallazCont4 += 1;
+            }
+
+            if (hallaz4S4 != null)
+            {
+                hallazCont4 += 1;
+            }
+
+            hallazContF = hallazContF + hallazCont4;
+
+            #endregion
+
+            #region Hallazgos_5taS
+
+            hallaz1S5 = F2H1S5.Text;
+            hallaz2S5 = F2H2S5.Text;
+            hallaz3S5 = F2H3S5.Text;
+            hallaz4S5 = F2H4S5.Text;
+
+            //Numero de hallazgos
+            if (hallaz1S5 != null)
+            {
+                hallazCont5 += 1;
+            }
+
+            if (hallaz2S5 != null)
+            {
+                hallazCont5 += 1;
+            }
+
+            if (hallaz3S5 != null)
+            {
+                hallazCont5 += 1;
+            }
+
+            if (hallaz4S5 != null)
+            {
+                hallazCont5 += 1;
+            }
+
+            hallazContF = hallazContF + hallazCont5;
+
+            #endregion
+
+            AppGlobals.hallazCont = hallazContF.ToString();
+
+            #endregion
+
+            FirebaseHelper fb = new FirebaseHelper();
+
+            await DisplayAlert("Mensaje", "Auditoria Cargada", "Continuar");
         }
 
     }

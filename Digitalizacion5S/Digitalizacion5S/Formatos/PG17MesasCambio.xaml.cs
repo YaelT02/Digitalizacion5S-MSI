@@ -31,7 +31,7 @@ namespace Digitalizacion5S.Formatos
             string hallaz1, hallaz2, hallaz3, hallaz4, hallaz5; 
             int hallazCont = 0;
             double cp = 0;
-            int c = 9;
+            int c = 8;
 
             //Pregunta 1
             if (NA1F17.IsChecked)

@@ -22,11 +22,11 @@ namespace Digitalizacion5S.ViewModel
         public string hallaz3;
         public string hallaz4;
         public string hallaz5;
-        public string fecha1;
-        public string fecha2;
-        public string fecha3;
-        public string fecha4;
-        public string fecha5;
+        public DateTime fecha1;
+        public DateTime fecha2;
+        public DateTime fecha3;
+        public DateTime fecha4;
+        public DateTime fecha5;
         public string accion1;
         public string accion2;
         public string accion3;
@@ -76,31 +76,31 @@ namespace Digitalizacion5S.ViewModel
             set { SetValue(ref this.hallaz5, value); }
         }
 
-        public string Fecha1Txt
+        public DateTime Fecha1
         {
             get { return this.fecha1; }
-            set { SetValue(ref this.fecha1, value); }
+            set { SetValue(ref this.fecha1, value);}
         }
 
-        public string Fecha2Txt
+        public DateTime Fecha2
         {
             get { return this.fecha2; }
             set { SetValue(ref this.fecha2, value); }
         }
 
-        public string Fecha3Txt
+        public DateTime Fecha3
         {
             get { return this.fecha3; }
             set { SetValue(ref this.fecha3, value); }
         }
 
-        public string Fecha4Txt
+        public DateTime Fecha4
         {
             get { return this.fecha4; }
             set { SetValue(ref this.fecha4, value); }
         }
 
-        public string Fecha5Txt
+        public DateTime Fecha5
         {
             get { return this.fecha5; }
             set { SetValue(ref this.fecha5, value); }
@@ -164,6 +164,16 @@ namespace Digitalizacion5S.ViewModel
         }
         #endregion
 
+        #region Conversion_Fecha
+
+        public string fecha1Txt => fecha1.ToString("yyyy-MM-dd");
+        public string fecha2Txt => fecha2.ToString("yyyy-MM-dd");
+        public string fecha3Txt => fecha3.ToString("yyyy-MM-dd");
+        public string fecha4Txt => fecha4.ToString("yyyy-MM-dd");
+        public string fecha5Txt => fecha5.ToString("yyyy-MM-dd");
+
+        #endregion
+
         #region Commands
         public ICommand InsertCommand
         {
@@ -192,11 +202,11 @@ namespace Digitalizacion5S.ViewModel
                 Hallaz3 = hallaz3,
                 Hallaz4 = hallaz4,
                 Hallaz5 = hallaz5,
-                Fecha1 = fecha1,
-                Fecha2 = fecha2,
-                Fecha3 = fecha3,
-                Fecha4 = fecha4,
-                Fecha5 = fecha5,
+                Fecha1 = fecha1Txt,
+                Fecha2 = fecha2Txt,
+                Fecha3 = fecha3Txt,
+                Fecha4 = fecha4Txt,
+                Fecha5 = fecha5Txt,
                 Accion1 = accion1,
                 Accion2 = accion2,
                 Accion3 = accion3,
@@ -230,11 +240,11 @@ namespace Digitalizacion5S.ViewModel
                 Hallaz3 = Hallaz3Txt,
                 Hallaz4 = Hallaz4Txt,
                 Hallaz5 = Hallaz5Txt,
-                Fecha1 = Fecha1Txt,
-                Fecha2 = Fecha2Txt,
-                Fecha3 = Fecha3Txt,
-                Fecha4 = Fecha4Txt,
-                Fecha5 = Fecha5Txt,
+                Fecha1 = fecha1Txt,
+                Fecha2 = fecha2Txt,
+                Fecha3 = fecha3Txt,
+                Fecha4 = fecha4Txt,
+                Fecha5 = fecha5Txt,
                 Accion1 = Accion1Txt,
                 Accion2 = Accion2Txt,
                 Accion3 = Accion3Txt,

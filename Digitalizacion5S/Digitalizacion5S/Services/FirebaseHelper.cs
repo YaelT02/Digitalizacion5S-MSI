@@ -59,7 +59,7 @@ namespace Digitalizacion5S.Services
             .Child(ClaveArea)
             .PutAsync(new HallazgosModel()
             {
-                ID = ClaveArea,
+                //ID = ClaveArea,
                 Hallaz1 = hallazgosModel.Hallaz1,
                 Hallaz2 = hallazgosModel.Hallaz2,
                 Hallaz3 = hallazgosModel.Hallaz3,
@@ -88,7 +88,7 @@ namespace Digitalizacion5S.Services
                 .Child(ClaveArea)
                 .PutAsync(new HallazgosOOModel()
                 {
-                    ID = ClaveArea,
+                    //ID = ClaveArea,
                     #region 1eraS
                     Hallaz1S1 = hallazgosOOModel.Hallaz1S1,
                     Hallaz2S1 = hallazgosOOModel.Hallaz2S1,

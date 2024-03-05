@@ -16,7 +16,7 @@
                            FontSize="20"
                            Padding="0,0,0,20"/>
 
-                    <Frame>
+                    <Frame Padding="0,10,0,10" Margin="15,5,15,5">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Calificación:"
                                     VerticalOptions="StartAndExpand"
@@ -34,7 +34,7 @@
                         </StackLayout>
                     </Frame>
 
-                    <Frame>
+                    <Frame Padding="0,10,0,10" Margin="15,5,15,5">
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Hallazgos:"
                                VerticalOptions="StartAndExpand"

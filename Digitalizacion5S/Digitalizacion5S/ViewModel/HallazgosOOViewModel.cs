@@ -25,10 +25,10 @@ namespace Digitalizacion5S.ViewModel
         public string hallaz3S1;
         public string hallaz4S1;
 
-        public string fecha1S1;
-        public string fecha2S1;
-        public string fecha3S1;
-        public string fecha4S1;
+        public DateTime fecha1S1;
+        public DateTime fecha2S1;
+        public DateTime fecha3S1;
+        public DateTime fecha4S1;
 
         public string accion1S1;
         public string accion2S1;
@@ -44,10 +44,10 @@ namespace Digitalizacion5S.ViewModel
         public string hallaz3S2;
         public string hallaz4S2;
 
-        public string fecha1S2;
-        public string fecha2S2;
-        public string fecha3S2;
-        public string fecha4S2;
+        public DateTime fecha1S2;
+        public DateTime fecha2S2;
+        public DateTime fecha3S2;
+        public DateTime fecha4S2;
 
         public string accion1S2;
         public string accion2S2;
@@ -63,10 +63,10 @@ namespace Digitalizacion5S.ViewModel
         public string hallaz3S3;
         public string hallaz4S3;
 
-        public string fecha1S3;
-        public string fecha2S3;
-        public string fecha3S3;
-        public string fecha4S3;
+        public DateTime fecha1S3;
+        public DateTime fecha2S3;
+        public DateTime fecha3S3;
+        public DateTime fecha4S3;
 
         public string accion1S3;
         public string accion2S3;
@@ -82,10 +82,10 @@ namespace Digitalizacion5S.ViewModel
         public string hallaz3S4;
         public string hallaz4S4;
 
-        public string fecha1S4;
-        public string fecha2S4;
-        public string fecha3S4;
-        public string fecha4S4;
+        public DateTime fecha1S4;
+        public DateTime fecha2S4;
+        public DateTime fecha3S4;
+        public DateTime fecha4S4;
 
         public string accion1S4;
         public string accion2S4;
@@ -101,10 +101,10 @@ namespace Digitalizacion5S.ViewModel
         public string hallaz3S5;
         public string hallaz4S5;
 
-        public string fecha1S5;
-        public string fecha2S5;
-        public string fecha3S5;
-        public string fecha4S5;
+        public DateTime fecha1S5;
+        public DateTime fecha2S5;
+        public DateTime fecha3S5;
+        public DateTime fecha4S5;
 
         public string accion1S5;
         public string accion2S5;
@@ -153,25 +153,25 @@ namespace Digitalizacion5S.ViewModel
             set { SetValue(ref this.hallaz4S1, value); }
         }
 
-        public string Fecha1S1Txt
+        public DateTime Fecha1S1Txt
         {
             get { return this.fecha1S1; }
             set { SetValue(ref this.fecha1S1, value); }
         }
 
-        public string Fecha2S1Txt
+        public DateTime Fecha2S1Txt
         {
             get { return this.fecha2S1; }
             set { SetValue(ref this.fecha2S1, value); }
         }
 
-        public string Fecha3S1Txt
+        public DateTime Fecha3S1Txt
         {
             get { return this.fecha3S1; }
             set { SetValue(ref this.fecha3S1, value); }
         }
 
-        public string Fecha4S1Txt
+        public DateTime Fecha4S1Txt
         {
             get { return this.fecha4S1; }
             set { SetValue(ref this.fecha4S1, value); }
@@ -229,25 +229,25 @@ namespace Digitalizacion5S.ViewModel
             set { SetValue(ref this.hallaz4S2, value); }
         }
 
-        public string Fecha1S2Txt
+        public DateTime Fecha1S2Txt
         {
             get { return this.fecha1S2; }
             set { SetValue(ref this.fecha1S2, value); }
         }
 
-        public string Fecha2S2Txt
+        public DateTime Fecha2S2Txt
         {
             get { return this.fecha2S2; }
             set { SetValue(ref this.fecha2S2, value); }
         }
 
-        public string Fecha3S2Txt
+        public DateTime Fecha3S2Txt
         {
             get { return this.fecha3S2; }
             set { SetValue(ref this.fecha3S2, value); }
         }
 
-        public string Fecha4S2Txt
+        public DateTime Fecha4S2Txt
         {
             get { return this.fecha4S2; }
             set { SetValue(ref this.fecha4S2, value); }
@@ -305,25 +305,25 @@ namespace Digitalizacion5S.ViewModel
             set { SetValue(ref this.hallaz4S3, value); }
         }
 
-        public string Fecha1S3Txt
+        public DateTime Fecha1S3Txt
         {
             get { return this.fecha1S3; }
             set { SetValue(ref this.fecha1S3, value); }
         }
 
-        public string Fecha2S3Txt
+        public DateTime Fecha2S3Txt
         {
             get { return this.fecha2S3; }
             set { SetValue(ref this.fecha2S3, value); }
         }
 
-        public string Fecha3S3Txt
+        public DateTime Fecha3S3Txt
         {
             get { return this.fecha3S3; }
             set { SetValue(ref this.fecha3S3, value); }
         }
 
-        public string Fecha4S3Txt
+        public DateTime Fecha4S3Txt
         {
             get { return this.fecha4S3; }
             set { SetValue(ref this.fecha4S3, value); }
@@ -381,25 +381,25 @@ namespace Digitalizacion5S.ViewModel
             set { SetValue(ref this.hallaz4S4, value); }
         }
 
-        public string Fecha1S4Txt
+        public DateTime Fecha1S4Txt
         {
             get { return this.fecha1S4; }
             set { SetValue(ref this.fecha1S4, value); }
         }
 
-        public string Fecha2S4Txt
+        public DateTime Fecha2S4Txt
         {
             get { return this.fecha2S4; }
             set { SetValue(ref this.fecha2S4, value); }
         }
 
-        public string Fecha3S4Txt
+        public DateTime Fecha3S4Txt
         {
             get { return this.fecha3S4; }
             set { SetValue(ref this.fecha3S4, value); }
         }
 
-        public string Fecha4S4Txt
+        public DateTime Fecha4S4Txt
         {
             get { return this.fecha4S4; }
             set { SetValue(ref this.fecha4S4, value); }
@@ -457,25 +457,25 @@ namespace Digitalizacion5S.ViewModel
             set { SetValue(ref this.hallaz4S5, value); }
         }
 
-        public string Fecha1S5Txt
+        public DateTime Fecha1S5Txt
         {
             get { return this.fecha1S5; }
             set { SetValue(ref this.fecha1S5, value); }
         }
 
-        public string Fecha2S5Txt
+        public DateTime Fecha2S5Txt
         {
             get { return this.fecha2S5; }
             set { SetValue(ref this.fecha2S5, value); }
         }
 
-        public string Fecha3S5Txt
+        public DateTime Fecha3S5Txt
         {
             get { return this.fecha3S5; }
             set { SetValue(ref this.fecha3S5, value); }
         }
 
-        public string Fecha4S5Txt
+        public DateTime Fecha4S5Txt
         {
             get { return this.fecha4S5; }
             set { SetValue(ref this.fecha4S5, value); }
@@ -536,6 +536,55 @@ namespace Digitalizacion5S.ViewModel
 
         #endregion
 
+        #region Converscion_Fechas
+
+        #region 1raS
+   
+        public string Fecha1S1 => Fecha1S1Txt.ToString("yyyy-MM-dd");
+        public string Fecha2S1 => Fecha2S1Txt.ToString("yyyy-MM-dd");
+        public string Fecha3S1 => Fecha3S1Txt.ToString("yyyy-MM-dd");
+        public string Fecha4S1 => Fecha4S1Txt.ToString("yyyy-MM-dd");
+
+        #endregion
+
+        #region 2daS
+
+        public string Fecha1S2 => Fecha1S2Txt.ToString("yyyy-MM-dd");
+        public string Fecha2S2 => Fecha2S2Txt.ToString("yyyy-MM-dd");
+        public string Fecha3S2 => Fecha3S2Txt.ToString("yyyy-MM-dd");
+        public string Fecha4S2 => Fecha4S2Txt.ToString("yyyy-MM-dd");
+
+        #endregion
+
+        #region 3raS
+
+        public string Fecha1S3 => Fecha1S3Txt.ToString("yyyy-MM-dd");
+        public string Fecha2S3 => Fecha2S3Txt.ToString("yyyy-MM-dd");
+        public string Fecha3S3 => Fecha3S3Txt.ToString("yyyy-MM-dd");
+        public string Fecha4S3 => Fecha4S3Txt.ToString("yyyy-MM-dd");
+
+        #endregion
+
+        #region 4taS
+
+        public string Fecha1S4 => Fecha1S4Txt.ToString("yyyy-MM-dd");
+        public string Fecha2S4 => Fecha2S4Txt.ToString("yyyy-MM-dd");
+        public string Fecha3S4 => Fecha3S4Txt.ToString("yyyy-MM-dd");
+        public string Fecha4S4 => Fecha4S4Txt.ToString("yyyy-MM-dd");
+
+        #endregion
+
+        #region 5taS
+
+        public string Fecha1S5 => Fecha1S5Txt.ToString("yyyy-MM-dd");
+        public string Fecha2S5 => Fecha2S5Txt.ToString("yyyy-MM-dd");
+        public string Fecha3S5 => Fecha3S5Txt.ToString("yyyy-MM-dd");
+        public string Fecha4S5 => Fecha4S5Txt.ToString("yyyy-MM-dd");
+
+        #endregion
+
+        #endregion
+
         #region Commands
         public ICommand InsertCommandOO
         {
@@ -557,10 +606,10 @@ namespace Digitalizacion5S.ViewModel
                 Hallaz2S1 = hallaz2S1,
                 Hallaz3S1 = hallaz3S1,
                 Hallaz4S1 = hallaz4S1,
-                Fecha1S1 = fecha1S1,
-                Fecha2S1 = fecha2S1,
-                Fecha3S1 = fecha3S1,
-                Fecha4S1 = fecha4S1,
+                Fecha1S1 = Fecha1S1,
+                Fecha2S1 = Fecha2S1,
+                Fecha3S1 = Fecha3S1,
+                Fecha4S1 = Fecha4S1,
                 Accion1S1 = accion1S1,
                 Accion2S1 = accion2S1,
                 Accion3S1 = accion3S1,
@@ -572,10 +621,10 @@ namespace Digitalizacion5S.ViewModel
                 Hallaz2S2 = hallaz2S2,
                 Hallaz3S2 = hallaz3S2,
                 Hallaz4S2 = hallaz4S2,
-                Fecha1S2 = fecha1S2,
-                Fecha2S2 = fecha2S2,
-                Fecha3S2 = fecha3S2,
-                Fecha4S2 = fecha4S2,
+                Fecha1S2 = Fecha1S2,
+                Fecha2S2 = Fecha2S2,
+                Fecha3S2 = Fecha3S2,
+                Fecha4S2 = Fecha4S2,
                 Accion1S2 = accion1S2,
                 Accion2S2 = accion2S2,
                 Accion3S2 = accion3S2,
@@ -587,10 +636,10 @@ namespace Digitalizacion5S.ViewModel
                 Hallaz2S3 = hallaz2S3,
                 Hallaz3S3 = hallaz3S3,
                 Hallaz4S3 = hallaz4S3,
-                Fecha1S3 = fecha1S3,
-                Fecha2S3 = fecha2S3,
-                Fecha3S3 = fecha3S3,
-                Fecha4S3 = fecha4S3,
+                Fecha1S3 = Fecha1S3,
+                Fecha2S3 = Fecha2S3,
+                Fecha3S3 = Fecha3S3,
+                Fecha4S3 = Fecha4S3,
                 Accion1S3 = accion1S3,
                 Accion2S3 = accion2S3,
                 Accion3S3 = accion3S3,
@@ -602,10 +651,10 @@ namespace Digitalizacion5S.ViewModel
                 Hallaz2S4 = hallaz2S4,
                 Hallaz3S4 = hallaz3S4,
                 Hallaz4S4 = hallaz4S4,
-                Fecha1S4 = fecha1S4,
-                Fecha2S4 = fecha2S4,
-                Fecha3S4 = fecha3S4,
-                Fecha4S4 = fecha4S4,
+                Fecha1S4 = Fecha1S4,
+                Fecha2S4 = Fecha2S4,
+                Fecha3S4 = Fecha3S4,
+                Fecha4S4 = Fecha4S4,
                 Accion1S4 = accion1S4,
                 Accion2S4 = accion2S4,
                 Accion3S4 = accion3S4,
@@ -617,10 +666,10 @@ namespace Digitalizacion5S.ViewModel
                 Hallaz2S5 = hallaz2S5,
                 Hallaz3S5 = hallaz3S5,
                 Hallaz4S5 = hallaz4S5,
-                Fecha1S5 = fecha1S5,
-                Fecha2S5 = fecha2S5,
-                Fecha3S5 = fecha3S5,
-                Fecha4S5 = fecha4S5,
+                Fecha1S5 = Fecha1S5,
+                Fecha2S5 = Fecha2S5,
+                Fecha3S5 = Fecha3S5,
+                Fecha4S5 = Fecha4S5,
                 Accion1S5 = accion1S5,
                 Accion2S5 = accion2S5,
                 Accion3S5 = accion3S5,

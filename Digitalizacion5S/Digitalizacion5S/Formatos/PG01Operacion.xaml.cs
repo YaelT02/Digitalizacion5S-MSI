@@ -22,11 +22,6 @@ namespace Digitalizacion5S.Formatos
             BindingContext = new HallazgosOOViewModel();
         }
 
-        private async void Mensaje_ADD(object sender, EventArgs e)
-        {
-            await DisplayAlert("Mensaje", "Datos Cargados", "Continuar");
-        }
-
         private async void Result_Clicked(object sender, EventArgs e)
         {
             string hallaz1S1, hallaz2S1, hallaz3S1, hallaz4S1,

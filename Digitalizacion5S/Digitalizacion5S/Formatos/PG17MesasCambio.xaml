@@ -308,15 +308,13 @@
                                         </StackLayout>
 
                                         <StackLayout Grid.Column="1" Grid.Row="2" Padding="-29,0,50,0">
-                                            <Entry BackgroundColor="#FFC803"
-                                                   PlaceholderColor="#606052"
-                                                   MaxLength="100"
-                                                   Margin="0,30,0,0"
-                                                   FontSize="15"
-                                                   Placeholder="dd/MM/yyyy"
-                                                   TextColor="Black"
-                                                   x:Name="F17D1"
-                                                   Text="{Binding Fecha1Txt, Mode=TwoWay}"/>
+                                            <DatePicker BackgroundColor="#FFC803"
+                                                        MinimumDate="01/01/2024"
+                                                        MaximumDate="12/31/2999"
+                                                        Margin="0,30,0,0"
+                                                        FontSize="15"
+                                                        TextColor="Black"
+                                                        Date="{Binding Fecha1, Mode=TwoWay}"/>
                                         </StackLayout>
 
                                     </Grid>
@@ -384,15 +382,13 @@
                                         </StackLayout>
 
                                         <StackLayout Grid.Column="1" Grid.Row="3" Padding="-29,0,50,0">
-                                            <Entry BackgroundColor="#FFC803"
-                                                   PlaceholderColor="#606052"
-                                                   MaxLength="100"
-                                                   Margin="0,30,0,0"
-                                                   FontSize="15"
-                                                   Placeholder="dd/MM/yyyy"
-                                                   TextColor="Black"
-                                                   x:Name="F17D2"
-                                                   Text="{Binding Fecha2Txt, Mode=TwoWay}"/>
+                                            <DatePicker BackgroundColor="#FFC803"
+                                                        MinimumDate="01/01/2024"
+                                                        MaximumDate="12/31/2999"
+                                                        Margin="0,30,0,0"
+                                                        FontSize="15"
+                                                        TextColor="Black"
+                                                        Date="{Binding Fecha2, Mode=TwoWay}"/>
                                         </StackLayout>
                                     </Grid>
                                 </StackLayout>
@@ -459,15 +455,13 @@
                                         </StackLayout>
 
                                         <StackLayout Grid.Column="1" Grid.Row="3" Padding="-29,0,50,0">
-                                            <Entry BackgroundColor="#FFC803"
-                                                   PlaceholderColor="#606052"
-                                                   MaxLength="100"
-                                                   Margin="0,30,0,0"
-                                                   FontSize="15"
-                                                   Placeholder="dd/MM/yyyy"
-                                                   TextColor="Black"
-                                                   x:Name="F17D3"
-                                                   Text="{Binding Fecha3Txt, Mode=TwoWay}"/>
+                                            <DatePicker BackgroundColor="#FFC803"
+                                                        MinimumDate="01/01/2024"
+                                                        MaximumDate="12/31/2999"
+                                                        Margin="0,30,0,0"
+                                                        FontSize="15"
+                                                        TextColor="Black"
+                                                        Date="{Binding Fecha3, Mode=TwoWay}"/>
                                         </StackLayout>
 
                                     </Grid>
@@ -535,15 +529,13 @@
                                         </StackLayout>
 
                                         <StackLayout Grid.Column="1" Grid.Row="3" Padding="-29,0,50,0">
-                                            <Entry BackgroundColor="#FFC803"
-                                                   PlaceholderColor="#606052"
-                                                   MaxLength="100"
-                                                   Margin="0,30,0,0"
-                                                   FontSize="15"
-                                                   Placeholder="dd/MM/yyyy"
-                                                   TextColor="Black"
-                                                   x:Name="F17D4"
-                                                   Text="{Binding Fecha4Txt, Mode=TwoWay}"/>
+                                            <DatePicker BackgroundColor="#FFC803"
+                                                        MinimumDate="01/01/2024"
+                                                        MaximumDate="12/31/2999"
+                                                        Margin="0,30,0,0"
+                                                        FontSize="15"
+                                                        TextColor="Black"
+                                                        Date="{Binding Fecha4, Mode=TwoWay}"/>
                                         </StackLayout>
 
                                     </Grid>
@@ -611,15 +603,13 @@
                                         </StackLayout>
 
                                         <StackLayout Grid.Column="1" Grid.Row="3" Padding="-29,0,50,0">
-                                            <Entry BackgroundColor="#FFC803"
-                                                   PlaceholderColor="#606052"
-                                                   MaxLength="100"
-                                                   Margin="0,30,0,0"
-                                                   FontSize="15"
-                                                   Placeholder="dd/MM/yyyy"
-                                                   TextColor="Black"
-                                                   x:Name="F17D5"
-                                                   Text="{Binding Fecha5Txt, Mode=TwoWay}"/>
+                                            <DatePicker BackgroundColor="#FFC803"
+                                                        MinimumDate="01/01/2024"
+                                                        MaximumDate="12/31/2999"
+                                                        Margin="0,30,0,0"
+                                                        FontSize="15"
+                                                        TextColor="Black"
+                                                        Date="{Binding Fecha5, Mode=TwoWay}"/>
                                         </StackLayout>
 
                                     </Grid>
