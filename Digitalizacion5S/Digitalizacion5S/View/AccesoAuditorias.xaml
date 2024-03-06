@@ -31,7 +31,9 @@
                                     CornerRadius="10"
                                     BackgroundColor="#FFC803"
                                     TextColor="Black"
-                                    Clicked="Resultados"/>
+                                    Command="{ Binding ConsultaPropCommand }"/>
+                                    <!--Clicked="Resultados"-->
+                                    
 
                             <Button Text="Mis Auditorias"
                                     HorizontalOptions="CenterAndExpand"
@@ -39,7 +41,8 @@
                                     CornerRadius="10"
                                     BackgroundColor="#FFC803"
                                     TextColor="Black"
-                                    Clicked="Auditorias"/>
+                                    Command="{ Binding ConsultaCommand }"/>
+                                    <!--Clicked="Auditorias"-->
                         </StackLayout>
                         
                     </StackLayout>

@@ -26,6 +26,8 @@ namespace Digitalizacion5S.View
             CrearBoton(AppGlobals.Audi3_Area, AppGlobals.Audi3_Nombre, AppGlobals.Audi3_Formato);
             CrearBoton(AppGlobals.Audi4_Area, AppGlobals.Audi4_Nombre, AppGlobals.Audi4_Formato);
 
+            BindingContext = new ConsultaViewModel();
+
         }
 
         private void CrearBoton(string area, string nombre, string formato)

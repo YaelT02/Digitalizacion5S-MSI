@@ -11,5 +11,6 @@ namespace Digitalizacion5S.Model
         public string Audi3 { get; set; }
         public string Audi4 { get; set; }
         public string Nombre { get; set; }
+        public string Resp1 { get; set; }
     }
 }

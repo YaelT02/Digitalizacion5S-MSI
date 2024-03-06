@@ -22,6 +22,19 @@ namespace Digitalizacion5S.Services
             firebase = new FirebaseClient(databaseUrl);
         }
 
+        #region CONSULTA DE HALLAZGOS
+
+        public async Task<HallazgosModel> GetHallazById(string areaId)
+        {
+            var hallazgo = await firebase
+                .Child("Hallazgo")
+                .Child(areaId)
+                .OnceSingleAsync<HallazgosModel>();
+            return hallazgo;
+        }
+
+        #endregion
+
         #region CONSULTA HALLAZ
         public async Task<List<HallazgosModel>> GetAllHallaz()
         {

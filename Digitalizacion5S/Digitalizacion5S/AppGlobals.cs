@@ -17,6 +17,8 @@ namespace Digitalizacion5S
 
         public static string nombreAudi { get; set; }
 
+        public static string areaResp1 { get; set; }
+
         #region Datos_Auditoria1
 
         public static string Audi1_Area { get; set; }
@@ -94,6 +96,34 @@ namespace Digitalizacion5S
         public static decimal Audi4_Cal { get; set; }
 
         public static int Audi4_NumHaz { get; set; }
+
+        #endregion
+
+        #region Datos_Hallaz1
+
+        public static string cal1 { get; set; }
+        public static string cant1 { get; set; }
+
+        #endregion
+
+        #region Datos_Hallaz2
+
+        public static string cal2 { get; set; }
+        public static string cant2 { get; set; }
+
+        #endregion
+
+        #region Datos_Hallaz3
+
+        public static string cal3 { get; set; }
+        public static string cant3 { get; set; }
+
+        #endregion
+
+        #region Datos_Hallaz4
+
+        public static string cal4 { get; set; }
+        public static string cant4 { get; set; }
 
         #endregion
 

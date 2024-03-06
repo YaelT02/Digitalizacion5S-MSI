@@ -18,19 +18,6 @@ namespace Digitalizacion5S.ViewModel
     public class LoginViewModel : BaseViewModel
     {
 
-        public string NombreAuditor
-        {
-            get { return nombreAuditor; }
-            set
-            {
-                if (nombreAuditor != value)
-                {
-                    nombreAuditor = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-
         #region Attributes
         private string email;
         private string password;
@@ -116,8 +103,6 @@ namespace Digitalizacion5S.ViewModel
 
                     AppGlobals.UID = uid;
 
-                    //await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
-
                     var auditorViewModel = new AuditorViewModel();
                     var (auditor, areaAudi1, areaAudi2, areaAudi3, areaAudi4) = await auditorViewModel.GetAuditorDetailsWithAreas(uid);
 
@@ -125,10 +110,10 @@ namespace Digitalizacion5S.ViewModel
                     if (auditor != null)
                     {
                         AppGlobals.nombreAudi = auditor.Nombre;
+                        AppGlobals.areaResp1 = auditor.Resp1;
 
                         if (areaAudi1 != null)
                         {
-
                             AppGlobals.Audi1_Area = auditor.Audi1;
                             AppGlobals.Audi1_Formato = areaAudi1.Formato;
                             AppGlobals.Audi1_Geren = areaAudi1.Geren;
