@@ -26,6 +26,17 @@ namespace Digitalizacion5S.View
         {
             if (!string.IsNullOrEmpty(nombre))
             {
+
+                var stacklayaout1 = new StackLayout()
+                {
+                    Orientation = StackOrientation.Horizontal
+
+                    var frame = new Frame()
+                    {
+
+                    }
+                };
+
                 var frame = new Frame
                 {
                     Padding = new Thickness(0, 20, 0, 20),
